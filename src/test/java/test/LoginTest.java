@@ -1,10 +1,16 @@
 package test;
 
+import org.json.JSONObject;
+import org.json.JSONTokener;
 import org.testng.annotations.*;
 import pages.LoginPage;
 
+import java.io.InputStream;
+
 public class LoginTest {
     LoginPage loginPage;
+    InputStream datais;
+    JSONObject loginUsers;
 
     @Test
     public void test() {
@@ -22,12 +28,25 @@ public class LoginTest {
     }
 
     @BeforeClass
-    public void beforeClass() {
+    public void beforeClass() throws Exception {
+        try {
+            String dataFileName = "data/loginUsers.json";
+            datais = getClass().getClassLoader().getResourceAsStream(dataFileName);
+            JSONTokener tokener = new JSONTokener(datais);
+            loginUsers = new JSONObject(tokener);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        } finally {
+            if (datais != null) {
+                datais.close();
+            }
+        }
 
     }
-
     @AfterClass
-    public void afterClass() {
-
+    public void afterClass(){
+        
     }
+
 }

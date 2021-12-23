@@ -1,0 +1,14 @@
+{
+  "invalidUser": {
+    "userName": "nirav@gmail.com",
+    "password" : "Nirav@123"
+  },
+  "invalidPassword": {
+    "username" : "standard@gmail.com",
+    "password" : "data"
+  },
+  "validUser" : {
+    "userName" : "nirav@gmail.com",
+    "password" : "Nirav@1234"
+  }
+}

@@ -1,5 +1,7 @@
 package base;
 
+import org.json.JSONObject;
+
 import javax.swing.text.AbstractDocument;
 import java.io.IOException;
 import java.io.InputStream;
