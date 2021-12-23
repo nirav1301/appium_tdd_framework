@@ -1,4 +1,16 @@
 {
+  "emptyEmailAndPassword":{
+  "userName": "",
+  "password" : ""
+},
+  "emptyEmail":{
+    "userName": "",
+    "password" : "fdfhfhjd"
+  },
+  "emptyPassword":{
+    "userName": "nirav@gmail.com",
+    "password" : ""
+  },
   "invalidUser": {
     "userName": "nirav@gmail.com",
     "password" : "Nirav@123"
